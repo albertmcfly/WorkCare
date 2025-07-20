@@ -1,0 +1,102 @@
+.loginContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+.login-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.login-img img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.login-form {
+    flex-direction: column;
+    /*background-color: #0f0f0f;*/
+    text-align: center;
+}
+
+.login-form h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.login-form p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+form {
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0 auto;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="phone"],
+input[type="email"] {
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: white;
+}
+
+input::placeholder {
+    color: #888;
+}
+
+button {
+    padding: 12px;
+    background-color: #ff4800;
+    color: #ffff;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #ff4c4c; 
+}
+
+.forgot-password {
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+.forgot-password a {
+    text-decoration: none;
+}
+
+.register-link {
+    margin-top: 15px;
+    font-size: 0.9rem;
+
+}
+
+.register-link a {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .loginContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .login-img {
+        display: none;
+    }
+}
