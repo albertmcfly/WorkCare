@@ -1,41 +1,41 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
-import Home from "./pages/Home"
-import Login from './pages/login';
-import './app.css'
+import { Routes, Route, Navigate } from "react-router-dom";
+import Home from "./pages/Home";
+import Login from './pages/Login';
 import Register from "./pages/Register";
-import ProtectedRoute from "./components/ProtectedRoute";
-import "./pages/test";
-import NotFound from "./pages/NotFound"; 
+/*import ProtectedRoute from "./components/ProtectedRoute";*/
+import NotFound from "./pages/NotFound";
+import Admin from "./pages/Admin";
+import "./app.css";
 
 function Logout() {
-  localStorage.clear()
-  return <Navigate to="/login/"></Navigate>
-  } 
+  localStorage.clear();
+  return <Navigate to="/login/" />;
+}
 
-  function RegisterAndLogout() {
-    localStorage.clear()
-    return <Register></Register>
-  }
+function RegisterAndLogout() {
+  localStorage.clear();
+  return <Register />;
+}
 
-function App (){
-  return(
-    <BrowserRouter>
-      <Routes>
-        <Route
+function App() {
+  return (
+    <Routes>
+      {/*<Route
         path="/"
         element={
           <ProtectedRoute>
-            <test></test>
+            
           </ProtectedRoute>
         }
-        />
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/Login" element={<Login />} />
-        <Route path="/Register" element={<Register />} />
-        <Route path="/NotFound" element={<NotFound />} />
-      </Routes>
-    </BrowserRouter>
-  )
+      />*/}
+      <Route path="/home" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<RegisterAndLogout />} />
+      <Route path="/logout" element={<Logout />} />
+      <Route path="*" element={<NotFound />} />
+      <Route path="/admin" element={<Admin />} />
+    </Routes>
+  );
 }
 
-export default App
+export default App;

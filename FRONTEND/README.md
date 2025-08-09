@@ -30,3 +30,15 @@ Cada vez que crees una nueva página, debes:
 
 Cualquier ruta nueva debe agregarse en App.jsx dentro de Routes.
 
+
+instalacion de iconos utilizados
+npm install @heroicons/react
+
+importar los iconos en el componente que usaras
+-import { HomeIcon, CameraIcon } from '@heroicons/react/24/outline'
+
+
+Instalación y uso de tailwinds 
+npm install tailwindcss @tailwindcss/vite
+
+
