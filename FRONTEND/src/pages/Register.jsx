@@ -27,7 +27,7 @@ function Register() {
                         <label htmlFor="fullname" className="block text-sm font-medium text-gray-700 mb-1">
                             Nombre completo
                         </label>
-                        <input
+                        <inputgit
                             id="fullname"
                             type="text"
                             placeholder="Tu nombre completo"

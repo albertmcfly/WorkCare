@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import mockUp1 from '../assets/images/ladingPage/mock-dash-mitad.png';
 import mockUp2 from '../assets/images/ladingPage/mock-dash.png';
 import logo from '../assets/images/logo/logo.png'
+import logoW from '../assets/images/logo/logo-white.png'
 import ilus from '../assets/images/ladingPage/ilustracion.webp';
 import mock from '../assets/images/ladingPage/mock-dash1.png';
 import Moconst from '../assets/images/ladingPage/constructor.png';
@@ -98,85 +99,140 @@ function Home() {
                 </div>
             </section>
             <section className="py-20 w-full bg-white">
-                <div className="max-w-[1280px] mx-auto px-[5%] flex flex-col lg:flex-row gap-10 lg:gap-16">
+                <div className="max-w-[1280px] mx-auto px-[5%] flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
                     <div className="lg:w-1/2 flex-shrink-0">
-                        <img src={ilus} alt="" className="w-full h-auto rounded-md" />
+                        <img src={ilus} alt="" className="w-full h-auto rounded-lg hover:scale-105 transition-transform duration-300" />
                     </div>
                     <div className="lg:w-1/2 flex flex-col justify-center text-left">
-                        <h6 className="text-md font-semibold mb-2 text-gray-700">Bienvenido a WorkCare</h6>
+                        <h6 className="text-md font-semibold mb-2 text-gray-700 uppercase tracking-wide">Bienvenido a WorkCare</h6>
                         <h1 className="text-3xl lg:text-4xl 2xl:text-5xl font-bold mb-4 text-gray-900">
-                            Reducción de Riesgos con Inteligencia Artificial
+                            Reducción de Riesgos con <span className="text-[#ff6600]">Inteligencia Artificial</span>
                         </h1>
                         <p className="text-lg leading-relaxed mb-6 text-gray-600 max-w-xl">
                             Supervisa el uso correcto del equipo de protección personal en tiempo real, generando alertas y reportes precisos que ayudan a prevenir accidentes.
                         </p>
-                        <ul className="list-disc list-inside space-y-2 text-gray-700 max-w-xl">
-                            <li>Reduce accidentes</li>
-                            <li>Disminuye multas por incumplimiento</li>
-                            <li>Protege la vida de tus trabajadores</li>
+                        <ul className="space-y-3 text-gray-700 max-w-xl">
+                            <li className="flex items-center gap-3">
+                                <span className="w-6 h-6 bg-[#ff6600] rounded-full flex items-center justify-center text-white font-bold">✓</span>
+                                Reduce accidentes
+                            </li>
+                            <li className="flex items-center gap-3">
+                                <span className="w-6 h-6 bg-[#ff6600] rounded-full flex items-center justify-center text-white font-bold">✓</span>
+                                Disminuye multas por incumplimiento
+                            </li>
+                            <li className="flex items-center gap-3">
+                                <span className="w-6 h-6 bg-[#ff6600] rounded-full flex items-center justify-center text-white font-bold">✓</span>
+                                Protege la vida de tus trabajadores
+                            </li>
                         </ul>
+                        <button className="mt-8 px-6 py-3 bg-black text-white rounded-3xl hover:bg-[#ff6600] transition-all duration-300 w-fit">
+                            Solicitar Demo
+                        </button>
                     </div>
                 </div>
+            </section>
 
-                <div className="max-w-[1280px] mx-auto px-[5%] flex flex-col lg:flex-row gap-10 lg:gap-16 mt-10">
-                    <div className="lg:w-1/2 flex flex-col justify-center text-left">
-                        <h1 className="text-3xl lg:text-4xl 2xl:text-5xl font-bold mb-4 text-gray-900">
-                            Centro de Control Visual para la Seguridad en Tiempo Real
+            <section className="feature py-20 bg-[#f5f5f5]">
+                <div className="max-w-[1280px] mx-auto px-[5%] flex flex-col lg:flex-row gap-10 lg:gap-16">
+                    <div className="grid grid-cols-2 grid-rows-2 gap-6 lg:w-1/2">
+                        {[1, 2, 3, 4].map((item) => (
+                            <div key={item} className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 flex items-center justify-center text-2xl font-bold text-[#ff6600]">
+                                {item}
+                            </div>
+                        ))}
+                    </div>
+                    <div className="lg:w-1/2 flex flex-col justify-center">
+                        <h6 className="text-md font-semibold mb-2 text-gray-700 uppercase">Seguridad Avanzada</h6>
+                        <h1 className="text-3xl lg:text-4xl font-bold mb-4 text-gray-900">
+                            Centro de Control Visual en Tiempo Real
                         </h1>
-                        <p className="text-lg leading-relaxed text-gray-600 max-w-xl">
-                            Nuestro panel centraliza el monitoreo con alertas visuales cuando detecta trabajadores sin EPP, todo en una interfaz
+                        <p className="text-lg leading-relaxed mb-6 text-gray-600">
+                            Nuestro panel centraliza el monitoreo con alertas visuales cuando detecta trabajadores sin EPP, todo en una interfaz amigable y moderna.
                         </p>
                     </div>
-                    <div className="lg:w-1/2">
-                        <img src={mock} alt="" className="w-full h-auto rounded-md" />
-                    </div>
                 </div>
             </section>
-            <section className="feature py-10 lg:py-30 bg-[#f5f5f5] ">
-                <div className="feature-container max-w-[1280px] mx-auto px-[5%] flex flex-col lg:flex-row gap-10 lg:gap-16">
-                    <div className="feature-item grid grid-cols-2 grid-rows-2 gap-[30px]">
-                        <div className="norma bg-white p-6 flex items-center justify-center ">1</div>
-                        <div className="norma bg-white p-6 flex items-center justify-center ">2</div>
-                        <div className="norma bg-white p-6 flex items-center justify-center ">3</div>
-                        <div className="norma bg-white p-6 flex items-center justify-center ">4</div>
-                    </div>
 
-                    <div className="feature-item ">
-                        <h6 className="text-md font-semibold mb-2 text-gray-700">Bienvenido a WorkCare</h6>
-                        <h1 className="text-3xl lg:text-4xl 2xl:text-5xl font-bold mb-4 text-gray-900">
-                            Reducción de Riesgos con Inteligencia Artificial
-                        </h1>
-                        <p className="text-lg leading-relaxed mb-6 text-gray-600 max-w-xl">
-                            Supervisa el uso correcto del equipo de protección personal en tiempo real, generando alertas y reportes precisos que ayudan a prevenir accidentes.
-                        </p>
-                        <ul className="list-disc list-inside space-y-2 text-gray-700 max-w-xl">
-                            <li>Reduce accidentes</li>
-                            <li>Disminuye multas por incumplimiento</li>
-                            <li>Protege la vida de tus trabajadores</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <section className="modelos my-10  lg:my-25 px-[10%] ">
-                <h1 className="text-3xl lg:text-4xl 2xl:text-5xl font-bold mb- text-gray-900 mb-4 text-center">Conoce nuestros modelos de seguridad</h1>
-                <div className="modelos-container grid grid-cols-2 grid-col-sp grid-rows-2 gap-[10px] md:gap-[30px] xl:h-150 ">
-                    <picture className="row-span-2">
-                        <img src={Moconst} alt="" className="w-full h-full rounded-lg lg:rounded-2xl" />
+            <section className="modelos my-20 px-[10%]">
+                <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-10 text-center">
+                    Conoce nuestros modelos de seguridad
+                </h1>
+                <div className="grid grid-cols-2 grid-rows-2 gap-4 md:gap-6 xl:h-[600px]">
+                    <picture className="row-span-2 hover:scale-105 transition-transform duration-300">
+                        <img src={Moconst} alt="" className="w-full h-full rounded-lg shadow-lg" />
                     </picture>
-                    <picture>
-                        <img src={MoCoci} alt="" className="w-full h-full rounded-lg lg:rounded-2xl" />
+                    <picture className="hover:scale-105 transition-transform duration-300">
+                        <img src={MoCoci} alt="" className="w-full h-full rounded-lg shadow-lg" />
                     </picture>
-                    <picture>
-                        <img src={MoMine} alt="" className="w-full h-full rounded-lg lg:rounded-2xl" />
+                    <picture className="hover:scale-105 transition-transform duration-300">
+                        <img src={MoMine} alt="" className="w-full h-full rounded-lg shadow-lg" />
                     </picture>
                 </div>
             </section>
-            <section className="cta px-[10%] pb-25">
+
+            <section className="cta px-[10%] pb-20">
                 <picture>
-                    <img src={cta} alt="" className="w-full h-auto" />
+                    <img src={cta} alt="" className="w-full h-auto rounded-lg hover:scale-105 transition-transform duration-300" />
                 </picture>
             </section>
-            <Link to="/admin">333333333</Link>
+
+            <footer className="flex flex-col px-20 py-15 bg-black text-white ">
+                <div className="flex flex-col md:flex-row gap-5 items-center justify-evenly">
+                    <div className="footer-item">
+                        <img src={logoW} alt="" className="h-8 w-auto" />
+                        <p>Protección EPP en tiempo real para tu equipo</p>
+                    </div>
+                    <div className="footer-item">
+                        <h2>ENLACES</h2>
+                        <ul className="leading-10">
+                            <li>
+                                <p>Sobre Nosotros</p>
+                            </li>
+                            <li>
+                                <p>Como Funcion</p>
+                            </li>
+                            <li>
+                                <p>Blog</p>
+                            </li>
+                            <li>
+                                <Link to="/admin">Mi Cuenta</Link>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="footer-item">
+                        <h2>AYUDA</h2>
+                        <ul className="leading-10">
+                            <li>
+                                <p>Centro de soporte</p>
+                            </li>
+                            <li>
+                                <p>Legal y Prinvacidad</p>
+                            </li>
+                            <li>
+                                <p>Contactanos</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="footer-item">
+                        <h2>AYUDA</h2>
+                        <ul className="leading-10">
+                            <li>
+                                <p>Centro de soporte</p>
+                            </li>
+                            <li>
+                                <p>Legal y Prinvacidad</p>
+                            </li>
+                            <li>
+                                <p>Contactanos</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="mt-10">
+                    <hr className="bg-white" />
+                    <p className="mt-5 text-center">© 2025 WorkCare todos los derechos reservados.</p>
+                </div>
+            </footer>
         </div>
     );
 }

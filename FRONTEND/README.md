@@ -6,12 +6,6 @@ Instala todas las dependencias del proyecto:
 
 npm i
 
-
-Para usar los iconos de FontAwesome en React, instala los siguientes paquetes:
-
-npm install --save @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome @fortawesome/free-brands-svg-icons
-
-
 Rutas con React Router:
 
 npm i react-router-dom
