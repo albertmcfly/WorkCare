@@ -176,6 +176,7 @@ function Home() {
                 </picture>
             </section>
 
+
             <footer className="flex flex-col px-20 py-15 bg-black text-white ">
                 <div className="flex flex-col md:flex-row gap-5 items-center justify-evenly">
                     <div className="footer-item">

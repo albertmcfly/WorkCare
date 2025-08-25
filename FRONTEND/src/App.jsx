@@ -4,8 +4,11 @@ import Login from './pages/Login';
 import Register from "./pages/Register";
 /*import ProtectedRoute from "./components/ProtectedRoute";*/
 import NotFound from "./pages/NotFound";
-import Admin from "./pages/Admin";
+import AdminDash from "./pages/AdminDash";
+import DetectarPage from './pages/DetectarPage'
 import "./app.css";
+import MonitoreoPage from "./pages/MonitoreoPage"
+import ViolationPage from "./pages/ViolationPage"
 
 function Logout() {
   localStorage.clear();
@@ -33,7 +36,10 @@ function App() {
       <Route path="/register" element={<RegisterAndLogout />} />
       <Route path="/logout" element={<Logout />} />
       <Route path="*" element={<NotFound />} />
-      <Route path="/admin" element={<Admin />} />
+      <Route path="/admin" element={<AdminDash />} />
+      <Route path="/detectar" element={<DetectarPage />} />
+      <Route path="/monitoreo" element={<MonitoreoPage />} />
+      <Route path="/violaciones" element={<ViolationPage />} />
     </Routes>
   );
 }

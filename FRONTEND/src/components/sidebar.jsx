@@ -11,16 +11,16 @@ function Sidebar() {
   ]
 
   return (
-    <aside className='bg-white w-full h-screen shadow-md flex flex-col'>
-      <div className="mx-5 my-3.5">
+    <aside className="bg-white w-[215px] fixed top-0 h-screen shadow-md flex flex-col overflow-hidden">
+      <div className="mx-5 my-3.5 flex-shrink-0">
         <Link to="/admin" className="inline-flex items-center space-x-2">
           <img src={logo} alt="Logo" className="h-10 w-auto" />
         </Link>
       </div>
 
-      <nav className="flex-1 px-5">
+      <nav className="flex-1 px-5 overflow-y-auto">
         <h2 className="font-bold text-gray-700 mb-5 uppercase tracking-wide">Menú Principal</h2>
-        <ul className='space-y-3'>
+        <ul className="space-y-3">
           {menuItems.map(({ name, icon: Icon, to }) => (
             <li key={name}>
               <Link
@@ -36,7 +36,7 @@ function Sidebar() {
         </ul>
       </nav>
 
-      <div className="px-5 py-4 border-t border-gray-200">
+      <div className="px-5 py-4 border-t border-gray-200 flex-shrink-0">
         <h3 className="font-bold text-gray-700 mb-3 uppercase tracking-wide">Otros</h3>
         <ul className="space-y-2">
           <li>
